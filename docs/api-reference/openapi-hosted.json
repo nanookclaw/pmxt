@@ -3,7 +3,7 @@
   "info": {
     "title": "PMXT Hosted Router API",
     "description": "Hosted-only endpoints for cross-venue search, matching, arbitrage, and SQL.",
-    "version": "04d3400"
+    "version": "ee06b90"
   },
   "servers": [
     {
@@ -74,7 +74,7 @@
               "type": "string",
               "default": "identity"
             },
-            "description": "Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), overlap (some shared scenarios), and disjoint (mutually exclusive). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true.\n",
+            "description": "Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), complement (A yes exactly when B no), overlap (some shared scenarios), and disjoint (cannot both resolve yes, but both can resolve no). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true.\n",
             "example": "identity"
           },
           {
@@ -86,6 +86,7 @@
                 "identity",
                 "subset",
                 "superset",
+                "complement",
                 "overlap",
                 "disjoint"
               ],
@@ -280,7 +281,7 @@
               "type": "string",
               "default": "identity"
             },
-            "description": "Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), overlap (some shared scenarios), and disjoint (mutually exclusive). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true.\n",
+            "description": "Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), complement (A yes exactly when B no), overlap (some shared scenarios), and disjoint (cannot both resolve yes, but both can resolve no). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true.\n",
             "example": "identity"
           },
           {
@@ -292,6 +293,7 @@
                 "identity",
                 "subset",
                 "superset",
+                "complement",
                 "overlap",
                 "disjoint"
               ],

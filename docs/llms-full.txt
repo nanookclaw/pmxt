@@ -3085,7 +3085,7 @@ Returns connected clusters of semantically matched events across venues. Use thi
 | `url` | string | No | Anchor the response to a specific event URL. |
 | `query` | string | No | Text search across cluster titles. |
 | `category` | string | No | Filter both sides of matched edges by event category. |
-| `relations` | string | No | Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), overlap (some shared scenarios), and disjoint (mutually exclusive). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true. |
+| `relations` | string | No | Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), complement (A yes exactly when B no), overlap (some shared scenarios), and disjoint (cannot both resolve yes, but both can resolve no). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true. |
 | `relation` | string | No | Single relation filter. Alias for relations. |
 | `minConfidence` | number | No |  |
 | `venues` | string | No | Comma-separated venue allow-list. |
@@ -3159,7 +3159,7 @@ Returns connected clusters of semantically matched markets across venues. Use th
 | `url` | string | No | Anchor the response to a specific market URL. |
 | `query` | string | No | Text search across cluster titles. |
 | `category` | string | No | Filter both sides of matched edges by market category. |
-| `relations` | string | No | Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), overlap (some shared scenarios), and disjoint (mutually exclusive). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true. |
+| `relations` | string | No | Comma-separated relation filter. Valid values: identity (same resolution), subset (A yes implies B yes), superset (B yes implies A yes), complement (A yes exactly when B no), overlap (some shared scenarios), and disjoint (cannot both resolve yes, but both can resolve no). Defaults to identity. For subset and superset, direction follows the pairwise edge direction returned in rawMatches when includeRawMatches=true. |
 | `relation` | string | No | Single relation filter. Alias for relations. |
 | `minConfidence` | number | No |  |
 | `venues` | string | No | Comma-separated venue allow-list. |
